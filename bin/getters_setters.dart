@@ -1,9 +1,11 @@
 void main(){
   //variables final compilan más rapida al estar definidas desde el principio
-  final mySquare = Square (side: -10);
-  // mySquare.side = 5;
+  final mySquare = Square (side: 10);
+  print('actual side:: ${mySquare._side}');
+  mySquare.side = 5;
   
-  print('area ${mySquare.area}');
+  print('area: ${mySquare.area}');
+  print('side: ${mySquare.side}');
 }
 
 class Square{
@@ -13,6 +15,10 @@ class Square{
   : assert(side >= 0, 'side must be >= 0'),
   //assert = interrumpe la ejecución normal del programa si una condición booleana es falsa
   _side = side;
+
+  double get side {
+    return _side;
+  }
 
   double get area{
     return _side * _side; 
