@@ -3,7 +3,7 @@ import 'package:test/expect.dart';
 
 void main() {
   final windPlant = WindPlant(initialEnergy: 100);
-  final nuclearPlant = NuclearPlant(energyLeft: 10000);
+  final nuclearPlant = NuclearPlant(energyLeft: 1000);
 
   print('wind: ${chargePhone(windPlant)}');
   print('nuclear: ${chargePhone(nuclearPlant)}');
@@ -32,6 +32,8 @@ abstract class EnergyPlant{
 
 // extends or implements
 class WindPlant extends EnergyPlant{
+  //required () propiedades dentro del constructor ), 
+  //el parametro que recibe lo iguala a energyLeft
   WindPlant({required double initialEnergy}) : super(energyLeft: initialEnergy, type: PlantType.wind);
 
   @override
@@ -51,6 +53,6 @@ class NuclearPlant implements EnergyPlant{
 
   @override
   void consumeEnergy(double amount){
-    energyLeft -= (amount = 0.5);
+    energyLeft -= (amount * 0.5);
   }
 }
