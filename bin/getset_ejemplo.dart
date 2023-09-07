@@ -1,5 +1,5 @@
 class Gfg{
-  String geekName;
+  String geekName='';
 
   String get getName{
     return geekName;
