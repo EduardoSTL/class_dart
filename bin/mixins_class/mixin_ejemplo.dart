@@ -1,9 +1,9 @@
 mixin A {
-  String getMessage() => 'A';
+  String getMessage() => 'A-';
 }
 
 mixin B {
-  String getMessage() => 'B';
+  String getMessage() => 'B+';
 }
 
 class P {

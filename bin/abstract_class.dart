@@ -1,6 +1,3 @@
-import 'dart:ffi';
-import 'package:test/expect.dart';
-
 void main() {
   final windPlant = WindPlant(initialEnergy: 100);
   final nuclearPlant = NuclearPlant(energyLeft: 1000);
