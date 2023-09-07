@@ -6,17 +6,18 @@ abstract class Pez extends Animal{}
 
 //nuevo midificador de clase: mixin
 //clases que definen el comportamiento de las clases que heredan de Animal
-mixin class Volador {
+mixin Volador {
   void volar() => print('estoy volando');
 }
 
-mixin class Caminante {
+mixin Caminante {
   void caminar() => print('estoy caminando');
 }
 
-mixin class Nadador {
+mixin Nadador {
   void nadar() => print('estoy nadando');
 }
+//los mixins son un concepto poderoso que le permite reutilizar código en múltiples jerarquías de clases.
 
 //Obj hereda de Mamifero y Nadador
 class Delfin extends Mamifero with Nadador{}
